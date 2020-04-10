@@ -20,6 +20,18 @@ const Person = Loadable({
   loader: () => import(/*webpackChunkName:'person'*/'./pages/Person'),
   loading: Loding
 })
+const Citilist = Loadable({
+  loader: () => import(/*webpackChunkName:'Citilist'*/'./pages/Citilist'),
+  loading: Loding
+})
+const Serch = Loadable({
+  loader: () => import(/*webpackChunkName:'Serch'*/'./pages/Serch'),
+  loading: Loding
+})
+const Map = Loadable({
+  loader: () => import(/*webpackChunkName:'Map'*/'./pages/Map'),
+  loading: Loding
+})
 class App extends React.Component {
   render() {
     return (
@@ -29,6 +41,9 @@ class App extends React.Component {
           <Route path='/main' exact component={Main} />
           <Route path='/reg' exact component={Reg} />
           <Route path='/person' exact component={Person} />
+          <Route path='/serch' exact component={Serch} />
+          <Route path='/citilist' exact component={Citilist} />
+          <Route path='/map' exact component={Map} />
         </Switch>
       </HashRouter>
     )
